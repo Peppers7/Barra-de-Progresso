@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&display=swap');
+:root{
+    --line-border-fill: #ff0c85;
+    --line-border-empty:#383838;
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #b9a2a2;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-image: url(img/nyan-cat-1.gif);
+}
+
+.container{
+    text-align: center;
+}
+
+.progresso-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+
+}
+
+.progresso-container::before {
+    content: '';
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.ciclo.ativo{
+    border-color: var(--line-border-fill);
+
+}
+
+.ciclo{
+    background-color: #3a9e1c;
+    color: #e2e2e2; 
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: 0.4s ease;
+
+}
+
+.bnt{
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding:  8px 30px;
+    margin: 5px;
+    font-size: 14px;
+
+}
+
+.bnt:active{
+    transform: scale(0.98);
+}
+
+.bnt:focus{
+    outline: 0;
+}
+.bnt:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
+
+ 
+
+.progresso{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+
+}
+
+.progress {
+    display: flex; 
+    justify-content: space-between;
+    position: relative;
+   margin-top: 30px;
+    align-items: center;
+     left: 55px;
+    
+    
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            width: 100vw;
+        }
+        .painel:nth-child(4),
+        .painel:nth-child(5){
+            display: none;
+        }
+    
+    
+    }
+    h1{
+        background-color: #61184f;
+        color: #cebc19; 
+        border-radius: 80%;
+        border: 3px solid navy;
+        font-style: italic;
+        font-weight: 100;
+        font-style: oblique;
+    }
+    
